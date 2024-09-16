@@ -1,0 +1,8 @@
+path: dnf_player_dataset_v1 # dataset root dir
+train: ../train/images
+val: ../valid/images
+
+# Classes
+names:
+  0: 'direction_button'
+  1: 'player'
