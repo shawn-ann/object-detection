@@ -1,0 +1,13 @@
+train: ../train/images
+val: ../valid/images
+test: ../test/images
+
+nc: 2
+names: ['director_icon', 'player']
+
+roboflow:
+  workspace: shawn_ann-126-com
+  project: dnf_agent
+  version: 1
+  license: CC BY 4.0
+  url: https://universe.roboflow.com/shawn_ann-126-com/dnf_agent/dataset/1
