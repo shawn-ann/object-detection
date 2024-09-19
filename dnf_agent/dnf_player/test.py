@@ -1,11 +1,11 @@
 from ultralytics import YOLO
 
 # Load a model
-model = YOLO("runs/detect/train3/weights/best.pt")  # pretrained YOLOv8n model
+model = YOLO("runs/detect/train8/weights/best.pt")  # pretrained YOLOv8n model
+
 
 # Run batched inference on a list of images
-results = model.predict(["img.jpg"],conf=0.40,iou=0.3)  # return a list of Results objects
-
+results = model.predict(["img.jpg"],conf=0.01,iou=0.1)  # return a list of Results objects
 # Process results list
 for result in results:
     boxes = result.boxes  # Boxes object for bounding box outputs
@@ -22,6 +22,6 @@ for result in results:
 # rf = Roboflow(api_key="JE2dF9UuZAK1IG3GtInx")
 # project = rf.workspace().project("dnf_agent")
 # model = project.version("1").model
-#
-# # infer on a local image
+# #
+# # # infer on a local image
 # predict = model.predict("img.jpg", confidence=40, overlap=30).save("prediction.jpg")
