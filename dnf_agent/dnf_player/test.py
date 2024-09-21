@@ -1,11 +1,11 @@
 from ultralytics import YOLO
 
 # Load a model
-model = YOLO("runs/detect/train4/weights/best.pt")  # pretrained YOLOv8n model
+model = YOLO("runs/detect/train/weights/best.pt")  # pretrained YOLOv8n model
 
 
 # Run batched inference on a list of images
-results = model.predict(["img.jpg"],conf=0.6,iou=0.1)  # return a list of Results objects
+results = model.predict(["img2.jpg"],conf=0.2)  # return a list of Results objects
 # Process results list
 for result in results:
     boxes = result.boxes  # Boxes object for bounding box outputs
