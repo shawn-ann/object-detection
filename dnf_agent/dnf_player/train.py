@@ -1,7 +1,6 @@
 from ultralytics import YOLO
 import torch
 
-print(torch.cuda.is_available())
 
 
 # Load a model
@@ -9,7 +8,7 @@ model = YOLO("yolov8n.yaml")  # build a new model from scratch
 
 # Use the model
 # model.train(data="../datasets/dnf_dataset_v1/data.yaml", pretrained=False, epochs=10)  # train the model
-model.train(data="../datasets/dnf_dataset_v1/data.yaml", pretrained=False, epochs=300)  # train the model
+model.train(data="../datasets/dnf_dataset_v1/data.yaml", pretrained=False, epochs=300, device=0)  # train the model
 metrics = model.val()  # evaluate model performance on the validation set
 
 results = model.predict("img.jpg")  # predict on an image
