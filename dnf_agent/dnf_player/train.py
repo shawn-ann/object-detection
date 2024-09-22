@@ -8,7 +8,7 @@ def process():
 
     # Use the model
     # model.train(data="../datasets/dnf_dataset_v1/data.yaml", pretrained=False, epochs=10)  # train the model
-    model.train(data="../datasets/dnf_dataset_v1/data.yaml", pretrained=False, epochs=500,amp=False)  # train the model
+    model.train(data="../datasets/dnf_dataset_v1/data.yaml", pretrained=False, epochs=3000,amp=False)  # train the model
     metrics = model.val()  # evaluate model performance on the validation set
 
     results = model.predict("img.jpg")  # predict on an image
